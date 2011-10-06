@@ -20,7 +20,7 @@ var ApplicationRouter = Backbone.Router.extend({
 
 	switchView: function(view) {
 		if (this.currentView) {
-			// Detach old view
+			// Detach the old view
 			this.currentView.remove();
 		}
 

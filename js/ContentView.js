@@ -2,8 +2,8 @@ var ContentView = Backbone.View.extend({
 	/*
 	 * Initialize with the template-id
 	 */
-	initialize: function(view) {
-		this.view = view;
+	initialize: function(options) {
+		this.view = options.view;
 	},
 	
 	/*

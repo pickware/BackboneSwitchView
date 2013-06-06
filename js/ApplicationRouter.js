@@ -3,10 +3,10 @@ var ApplicationRouter = Backbone.Router.extend({
 	initialize: function(el) {
 		this.el = el;
 
-		this.loremView = new ContentView({view: '#lorem'});
-		this.atView = new ContentView({view: '#at'});
-		this.duisView = new ContentView({view: '#duis'});
-		this.notFoundView = new ContentView({view: '#not-found'});
+		this.loremView = new ContentView({template: '#lorem'});
+		this.atView = new ContentView({template: '#at'});
+		this.duisView = new ContentView({template: '#duis'});
+		this.notFoundView = new ContentView({template: '#not-found'});
 	},
 
 	routes: {

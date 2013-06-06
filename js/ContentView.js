@@ -1,11 +1,12 @@
 var ContentView = Backbone.View.extend({
+
 	/*
 	 * Initialize with the template-id
 	 */
 	initialize: function(options) {
 		this.view = options.view;
 	},
-	
+
 	/*
 	 * Get the template content and render it into a new div-element
 	 */
@@ -15,4 +16,5 @@ var ContentView = Backbone.View.extend({
 
 		return this;
 	}
+
 });

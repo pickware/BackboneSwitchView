@@ -1,13 +1,14 @@
 var ApplicationRouter = Backbone.Router.extend({
+
 	initialize: function(el) {
 		this.el = el;
-		
+
 		this.loremView = new ContentView({view: '#lorem'});
 		this.atView = new ContentView({view: '#at'});
 		this.duisView = new ContentView({view: '#duis'});
 		this.notFoundView = new ContentView({view: '#not-found'});
 	},
-	
+
 	routes: {
 		"": "lorem",
 		"lorem": "lorem",
@@ -15,7 +16,7 @@ var ApplicationRouter = Backbone.Router.extend({
 		"duis": "duis",
 		"*else": "notFound"
 	},
-	
+
 	currentView: null,
 
 	switchView: function(view) {
@@ -32,9 +33,9 @@ var ApplicationRouter = Backbone.Router.extend({
 
 		this.currentView = view;
 	},
-	
+
 	/*
-	 * Change the active element in the topbar 
+	 * Change the active element in the topbar
 	 */
 	setActiveEntry: function(url) {
 		// Unmark all entries
@@ -43,23 +44,24 @@ var ApplicationRouter = Backbone.Router.extend({
 		// Mark active entry
 		$("li a[href='" + url + "']").parents('li').addClass('active');
 	},
-	
+
 	lorem: function() {
 		this.switchView(this.loremView);
 		this.setActiveEntry('#lorem');
 	},
-	
+
 	at: function() {
 		this.switchView(this.atView);
 		this.setActiveEntry('#at');
 	},
-	
+
 	duis: function() {
 		this.switchView(this.duisView);
 		this.setActiveEntry('#duis');
 	},
-	
+
 	notFound: function() {
 		this.switchView(this.notFoundView);
 	}
+
 });
